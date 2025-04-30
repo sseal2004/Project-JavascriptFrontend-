@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Color Scheme Switcher</title>
+  <script src="script.js"></script>
+  <style>
+   
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #fff;
+    transition: background-color 0.4s ease;
+    min-height: 100vh;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+  }
+
+  .button {
+    margin: 0 10px;
+    padding: 12px 28px;
+    border: none;
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+  }
+
+  .button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  }
+
+  .boxes {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .box {
+    height: 7em;
+    width: 7em;
+    border: 3px solid #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .box:hover {
+    transform: scale(1.08);
+    opacity: 0.85;
+  }
+
+  #grey {
+    background-color: grey;
+  }
+
+  #white {
+    background-color: white;
+  }
+
+  #blue {
+    background-color: royalblue;
+  }
+
+  #yellow {
+    background-color: gold;
+  }
+
+  h1 {
+    margin-top: 30px;
+    font-size: 26px;
+    color: #1e1c1c;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  }
+</style>
+
+</head>
+<body>
+
+  <div class="navbar">
+    <button class="button" onclick="location.href='../index.html'">Home</button>
+    </div>
+  <h1>Color Scheme Switcher</h1>
+
+  <div class="boxes">
+    <div class="box" id="grey"></div>
+    <div class="box" id="white"></div>
+    <div class="box" id="blue"></div>
+    <div class="box" id="yellow"></div>
+  </div>
+
+  <h1>Try clicking on one of the colours above to change the background color of this page.</h1>
+
+  <script>
+    const boxes = document.querySelectorAll(".box");
+    boxes.forEach(box => {
+      box.addEventListener("click", (e) => {
+        document.body.style.backgroundColor = e.target.id;
+      });
+    });
+  </script>
+
+</body>
+</html>
+

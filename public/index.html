@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Frontend Projects</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0;
+      color: #fff;
+    }
+
+    nav {
+      background: linear-gradient(90deg, #ff416c, #ff4b2b, #ff6a00);
+      width: 100%;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    nav h1 {
+      color: #fff;
+      font-size: 32px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+      letter-spacing: 1px;
+    }
+
+    .all {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+      width: 90%;
+      max-width: 1000px;
+      padding: 40px 0;
+    }
+
+    .button {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 25px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .button a {
+      display: inline-block;
+      padding: 12px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      background-color: #00cec9;
+      color: #fff;
+      text-decoration: none;
+      margin-bottom: 10px;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .button a:hover {
+      background-color: #00b894;
+      transform: translateY(-2px);
+    }
+
+    .button label {
+      display: block;
+      font-size: 14px;
+      color: #f1f1f1;
+      margin-top: 5px;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+<!-- Website link -  https://frontend-javascript.web.app -->
+  <nav>
+    <h1>JavaScript Frontend Projects</h1>
+  </nav>
+  
+  <div class="all">
+    <div class="button">
+      <a href="01_ColorBox/index_cb.html">Project_01</a>
+      <label>Color Box</label>
+    </div>
+    <div class="button">
+      <a href="02_BMICalculator/index_bmi.html">Project_02</a>
+      <label>BMI Calculator</label>
+    </div>
+    <div class="button">
+      <a href="03_DigitalClock/index_dc.html">Project_03</a>
+      <label>Digital Clock</label>
+    </div>
+    <div class="button">
+      <a href="04_GuessNumber/index_g.html">Project_04</a>
+      <label>Guess a Number</label>
+    </div>
+    <div class="button">
+      <a href="05_GuessWith10Choices/index_g10.html">Project_05</a>
+      <label>Guess a Number with 10 Choices</label>
+    </div>
+  </div>
+
+</body>
+</html>
